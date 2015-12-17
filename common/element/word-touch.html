@@ -1,0 +1,66 @@
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="word-touch">
+    <template>
+        <paper-button raised class>
+            <div class="word">{{kana.word}}</div>
+            <div class="spell">{{kana.spell}}</div
+        </paper-button>
+    </template>
+    <style is= "word-touch">
+        paper-button {
+            width: 50px;
+            padding: 0px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        div.word {
+            background: #AAA !important;
+            font-size: 24pt;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        div.spell {
+            background: #888 !important;
+            font-size: 18pt;
+            width: 100%;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        div.shadow {
+            margin-top: 10px;
+            background: #555;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        WordTouch = Polymer({
+            is: "word-touch",
+            properties: {
+                kana: Object
+            },
+            hostAttributes: {
+                'class': 'red'
+            },
+            ready: function() {
+                console.log(this.kana);
+            }, 
+            factoryImpl: function(kana) {
+                this.kana = kana;
+                this.notifyPath('kana', this.kana);
+            }
+        });
+    </script>
+</dom-module>
+

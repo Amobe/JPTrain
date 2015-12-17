@@ -1,0 +1,19 @@
+{
+  "name": "JPTrain",
+  "homepage": "https://github.com/Amobe/JPTrain",
+  "authors": [
+    "Amobe <amobe.momoko@gmail.com>"
+  ],
+  "description": "Japanese learn Website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "JPTrain"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "paper-button": "PolymerElements/paper-button#~1.0.11"
+  }
+}
