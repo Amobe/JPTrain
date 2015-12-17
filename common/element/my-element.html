@@ -1,0 +1,27 @@
+
+<link rel="import" href="../../assets/components/polymer/polymer.html">
+
+<dom-module id="word-touch">
+    <template>
+        <span>{{kana.word}}:{{kana.spell}}</span>
+    </template>
+    <script>
+        WordTouch = Polymer({
+            is: "word-touch",
+            properties: {
+                kana: Object
+            },
+            hostAttributes: {
+                'class': 'red'
+            },
+            ready: function() {
+                console.log(this.kana);
+            }, 
+            factoryImpl: function(kana) {
+                this.kana = kana;
+                this.notifyPath('kana', this.kana);
+            }
+        });
+    </script>
+</dom-module>
+

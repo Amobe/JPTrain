@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>JPTrain</title>
+
+    <script src="assets/components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="common/element/my-element.html">
+
+    <link rel="stylesheet" href="common/css/screen.css">
+</head>
+<body>
+    <div id="container"></div>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="common/js/words.js" ></script>
+    <script>
+        var a = new Kana("あ", "a", KanaType.SEION);
+        var b = new WordTouch(a);
+        $("#container").append(b);
+    </script>
+</body>
+</html>
