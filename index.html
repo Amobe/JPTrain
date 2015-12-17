@@ -11,6 +11,8 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <!-- Common Lib -->
     <link rel="import" href="common/element/word-touch.html">
+    <link rel="import" href="common/element/word-row.html">
+    <link rel="import" href="common/element/word-table.html">
     <link rel="stylesheet" href="common/css/screen.css">
 </head>
 <body>
@@ -19,9 +21,37 @@
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="common/js/words.js" ></script>
     <script>
-        var a = new Kana("あ", "a", KanaType.SEION);
-        var b = new WordTouch(a);
-        $("#container").append(b);
+        // Test word touch
+        // var k = new Kana("あ", "a", KanaType.SEION);
+        // var wt = new WordTouch(k);
+        // $("#container").append(wt);
+        // Test word row
+        // var kr = new Array();
+        // kr.push(new Kana("あ", "a", KanaType.SEION));
+        // kr.push(new Kana("い", "i", KanaType.SEION));
+        // kr.push(new Kana("う", "u", KanaType.SEION));
+        // kr.push(new Kana("え", "e", KanaType.SEION));
+        // kr.push(new Kana("お", "o", KanaType.SEION));
+        // var wr = new WordRow(kr, "a");
+        // $("#container").append(wr);
+        // Test word table
+        var kt = new Array();
+        var kr1 = new Array();
+        kr1.push(new Kana("あ", "a", KanaType.SEION));
+        kr1.push(new Kana("い", "i", KanaType.SEION));
+        kr1.push(new Kana("う", "u", KanaType.SEION));
+        kr1.push(new Kana("え", "e", KanaType.SEION));
+        kr1.push(new Kana("お", "o", KanaType.SEION));
+        var kr2 = new Array();
+        kr2.push(new Kana("か", "ka", KanaType.SEION));
+        kr2.push(new Kana("き", "ki", KanaType.SEION));
+        kr2.push(new Kana("く", "ku", KanaType.SEION));
+        kr2.push(new Kana("け", "ke", KanaType.SEION));
+        kr2.push(new Kana("こ", "ko", KanaType.SEION));
+        kt.push(kr1);
+        kt.push(kr2);
+        var wt = new WordTable(kt);
+        $("#container").append(wt);
     </script>
 </body>
 </html>
