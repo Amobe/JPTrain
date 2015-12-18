@@ -7,7 +7,7 @@
         <div class="word-table">
             <template is="dom-repeat" items="{{kanaRowList}}" as="kanaRow">
                 <div class="word-table-cell">
-                    <word-row kana-row="[[kanaRow]]" key-spell="a"></word-row>
+                    <word-row kana-row="[[kanaRow]]"></word-row>
                 </div>
             </template>
         </div>
@@ -33,11 +33,12 @@
             hostAttributes: {
             },
             ready: function() {
+                console.log(this.kanaRowList);
             }, 
             factoryImpl: function(kanaRowList) {
-                this.kanaRowList = kanaRowList
+                this.kanaRowList = kanaRowList;
             },
-            addRow: function(kanaRow, keySpell) {
+            addRow: function(kanaRow) {
                 this.push('kanaRowList', kanaRow);
             }
         });

@@ -37,6 +37,41 @@ Kana.prototype.GetTypeName = function() {
     return this.constructor.name;
 }
 
+function checkObjectIsKana(kana) {
+    if (typeof(kana.GetTypeName) === 'function') {
+        if (kana.GetTypeName() == "Kana")
+            return true;
+    }
+    console.log("Object is not a kana: " + kana);
+    return false;
+}
+
+/*
+    ##    ##    ###    ##    ##    ###            ########   #######  ##      ## 
+    ##   ##    ## ##   ###   ##   ## ##           ##     ## ##     ## ##  ##  ## 
+    ##  ##    ##   ##  ####  ##  ##   ##          ##     ## ##     ## ##  ##  ## 
+    #####    ##     ## ## ## ## ##     ##         ########  ##     ## ##  ##  ## 
+    ##  ##   ######### ##  #### #########         ##   ##   ##     ## ##  ##  ## 
+    ##   ##  ##     ## ##   ### ##     ##         ##    ##  ##     ## ##  ##  ## 
+    ##    ## ##     ## ##    ## ##     ## ####### ##     ##  #######   ###  ###  
+*/
+
+var KanaRow = function KanaRow(kanaList, keySpell, kanaType) {
+    if (kanaList instanceof Array) {
+        this.kanaList = kanaList;
+    } else {
+        this.kanaList = new Array();
+    }
+    this.keySpell = keySpell;
+    this.kanaType = kanaType;
+}
+
+KanaRow.prototype.AddKana = function(kana) {
+    if (checkObjectIsKana(kana)) {
+        this.kanaList.push(kana);
+    }
+}
+
 /*
     ##    ##    ###    ##    ##    ###            ##     ##    ###    ########  
     ##   ##    ## ##   ###   ##   ## ##           ###   ###   ## ##   ##     ## 

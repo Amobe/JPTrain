@@ -26,32 +26,32 @@
         // var wt = new WordTouch(k);
         // $("#container").append(wt);
         // Test word row
-        // var kr = new Array();
-        // kr.push(new Kana("あ", "a", KanaType.SEION));
-        // kr.push(new Kana("い", "i", KanaType.SEION));
-        // kr.push(new Kana("う", "u", KanaType.SEION));
-        // kr.push(new Kana("え", "e", KanaType.SEION));
-        // kr.push(new Kana("お", "o", KanaType.SEION));
-        // var wr = new WordRow(kr, "a");
-        // $("#container").append(wr);
+        var kr = new KanaRow(null, "a", KanaType.SEION);
+        kr.AddKana(new Kana("あ", "a", KanaType.SEION));
+        kr.AddKana(new Kana("い", "i", KanaType.SEION));
+        kr.AddKana(new Kana("う", "u", KanaType.SEION));
+        kr.AddKana(new Kana("え", "e", KanaType.SEION));
+        kr.AddKana(new Kana("お", "o", KanaType.SEION));
+        var wr = new WordRow(kr);
+        $("#container").append(wr);
         // Test word table
-        var kt = new Array();
-        var kr1 = new Array();
-        kr1.push(new Kana("あ", "a", KanaType.SEION));
-        kr1.push(new Kana("い", "i", KanaType.SEION));
-        kr1.push(new Kana("う", "u", KanaType.SEION));
-        kr1.push(new Kana("え", "e", KanaType.SEION));
-        kr1.push(new Kana("お", "o", KanaType.SEION));
-        var kr2 = new Array();
-        kr2.push(new Kana("か", "ka", KanaType.SEION));
-        kr2.push(new Kana("き", "ki", KanaType.SEION));
-        kr2.push(new Kana("く", "ku", KanaType.SEION));
-        kr2.push(new Kana("け", "ke", KanaType.SEION));
-        kr2.push(new Kana("こ", "ko", KanaType.SEION));
-        kt.push(kr1);
-        kt.push(kr2);
-        var wt = new WordTable(kt);
-        $("#container").append(wt);
+        // var kt = new Array();
+        // var kr1 = new KanaRow(null, "a", KanaType.SEION);
+        // kr1.AddKana(new Kana("あ", "a", KanaType.SEION));
+        // kr1.AddKana(new Kana("い", "i", KanaType.SEION));
+        // kr1.AddKana(new Kana("う", "u", KanaType.SEION));
+        // kr1.AddKana(new Kana("え", "e", KanaType.SEION));
+        // kr1.AddKana(new Kana("お", "o", KanaType.SEION));
+        // var kr2 = new KanaRow(null, "k", KanaType.SEION);
+        // kr2.AddKana(new Kana("か", "ka", KanaType.SEION));
+        // kr2.AddKana(new Kana("き", "ki", KanaType.SEION));
+        // kr2.AddKana(new Kana("く", "ku", KanaType.SEION));
+        // kr2.AddKana(new Kana("け", "ke", KanaType.SEION));
+        // kr2.AddKana(new Kana("こ", "ko", KanaType.SEION));
+        // kt.push(kr1);
+        // kt.push(kr2);
+        // var wt = new WordTable(kt);
+        // $("#container").append(wt);
     </script>
 </body>
 </html>

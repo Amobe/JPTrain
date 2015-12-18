@@ -48,9 +48,10 @@
             ready: function() {
                 console.log(this.kanaRow);
             }, 
-            factoryImpl: function(kanaRow, keySpell) {
-                this.kanaRow = kanaRow;
-                this.keySpell = keySpell;
+            factoryImpl: function(kanaRow) {
+                this.kanaRow = kanaRow.kanaList;
+                console.log(this.kanaRow);
+                this.keySpell = kanaRow.keySpell;
             },
             addKana: function(kana) {
                 this.push('kanaRow', kana);
