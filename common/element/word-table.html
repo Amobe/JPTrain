@@ -5,9 +5,9 @@
 <dom-module id="word-table">
     <template>
         <div class="word-table">
-            <template is="dom-repeat" items="{{kanaRowList}}" as="kanaRow">
+            <template is="dom-repeat" items="{{_toArray(kanaRowList)}}" as="kanaRow">
                 <div class="word-table-cell">
-                    <word-row kana-row="[[kanaRow]]"></word-row>
+                    <word-row kana-row="[[kanaRow.kanaList]]"></word-row>
                 </div>
             </template>
         </div>
@@ -33,13 +33,19 @@
             hostAttributes: {
             },
             ready: function() {
-                console.log(this.kanaRowList);
+                logging(this.kanaRowList);
             }, 
-            factoryImpl: function(kanaRowList) {
-                this.kanaRowList = kanaRowList;
+            factoryImpl: function(kanaTable) {
+                this.kanaTable = kanaTable;
+                this.kanaRowList = kanaTable.kanaRowList;
             },
-            addRow: function(kanaRow) {
-                this.push('kanaRowList', kanaRow);
+            _toArray: function(obj) {
+                return Object.keys(obj).map(function(key) {
+                    return {
+                        keySpell: key,
+                        kanaList: obj[key]
+                    };
+                });
             }
         });
     </script>

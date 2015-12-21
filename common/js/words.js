@@ -1,4 +1,11 @@
 
+// var DEBUG = true;
+var DEBUG = false;
+
+function logging(msg) {
+    if (DEBUG) console.log(msg);
+}
+
 /*
     ##    ##    ###    ##    ##    ###            ######## ##    ## ########  ######## 
     ##   ##    ## ##   ###   ##   ## ##              ##     ##  ##  ##     ## ##       
@@ -35,16 +42,16 @@ Kana.prototype.ShowKana = function() {
 
 Kana.prototype.GetTypeName = function() {
     return this.constructor.name;
-}
+};
 
 function checkObjectIsKana(kana) {
     if (typeof(kana.GetTypeName) === 'function') {
         if (kana.GetTypeName() == "Kana")
             return true;
     }
-    console.log("Object is not a kana: " + kana);
+    console.log("Object is not a Kana: " + kana);
     return false;
-}
+};
 
 /*
     ##    ##    ###    ##    ##    ###            ########   #######  ##      ## 
@@ -64,13 +71,46 @@ var KanaRow = function KanaRow(kanaList, keySpell, kanaType) {
     }
     this.keySpell = keySpell;
     this.kanaType = kanaType;
-}
+};
 
 KanaRow.prototype.AddKana = function(kana) {
     if (checkObjectIsKana(kana)) {
         this.kanaList.push(kana);
     }
-}
+};
+
+KanaRow.prototype.GetTypeName = function() {
+    return this.constructor.name;
+};
+
+function checkObjectIsKanaRow(kanaRow) {
+    if (typeof(kanaRow.GetTypeName) === 'function') {
+        if (kanaRow.GetTypeName() == "KanaRow")
+            return true;
+    }
+    console.log("Object is not a KanaRow: " + kanaRow);
+    return false;
+};
+
+/*
+    ##    ##    ###    ##    ##    ###            ########    ###    ########  ##       ######## 
+    ##   ##    ## ##   ###   ##   ## ##              ##      ## ##   ##     ## ##       ##       
+    ##  ##    ##   ##  ####  ##  ##   ##             ##     ##   ##  ##     ## ##       ##       
+    #####    ##     ## ## ## ## ##     ##            ##    ##     ## ########  ##       ######   
+    ##  ##   ######### ##  #### #########            ##    ######### ##     ## ##       ##       
+    ##   ##  ##     ## ##   ### ##     ##            ##    ##     ## ##     ## ##       ##       
+    ##    ## ##     ## ##    ## ##     ## #######    ##    ##     ## ########  ######## ######## 
+*/
+
+var KanaTable = function KanaTable() {
+    this.kanaRowList = {};
+};
+
+KanaTable.prototype.AddKanaRow = function(kanaRow) {
+    if (checkObjectIsKanaRow(kanaRow)) {
+        this.kanaRowList[kanaRow.keySpell] = kanaRow;
+    }
+};
 
 /*
     ##    ##    ###    ##    ##    ###            ##     ##    ###    ########  

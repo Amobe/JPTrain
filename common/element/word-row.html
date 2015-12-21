@@ -8,7 +8,7 @@
             <div class="header">
                 <span>{{keySpell}}</span>
             </div>
-            <template is="dom-repeat" items="{{kanaRow}}" as="kana">
+            <template is="dom-repeat" items="{{kanaList}}" as="kana">
                 <word-touch kana="[[kana]]"></word-touch>
             </template>
         </div>
@@ -37,24 +37,27 @@
         WordRow = Polymer({
             is: "word-row",
             properties: {
-                kanaRow: {
+                kanaRow: Object,
+                keySpell: String,
+                kanaList: {
                     type: Array,
                     notify: true
-                },
-                keySpell: String
+                }
             },
             hostAttributes: {
             },
             ready: function() {
-                console.log(this.kanaRow);
-            }, 
+                logging(this.kanaRow);
+                this.keySpell = this.kanaRow.keySpell;
+                this.kanaList = this.kanaRow.kanaList;
+            },
             factoryImpl: function(kanaRow) {
-                this.kanaRow = kanaRow.kanaList;
-                console.log(this.kanaRow);
+                this.kanaRow = kanaRow;
                 this.keySpell = kanaRow.keySpell;
+                this.kanaList = kanaRow.kanaList;
             },
             addKana: function(kana) {
-                this.push('kanaRow', kana);
+                this.push('kanaList', kana);
             }
         });
     </script>
