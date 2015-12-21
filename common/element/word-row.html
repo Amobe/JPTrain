@@ -8,9 +8,11 @@
             <div class="header">
                 <span>{{keySpell}}</span>
             </div>
-            <template is="dom-repeat" items="{{kanaList}}" as="kana">
-                <word-touch kana="[[kana]]"></word-touch>
-            </template>
+            <div class="content">
+                <template is="dom-repeat" items="{{kanaList}}" as="kana">
+                    <word-touch kana="[[kana]]"></word-touch>
+                </template>
+            </div>
         </div>
     </template>
     <style is= "word-row">
@@ -18,7 +20,7 @@
             display: table;
             background: #333;
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
         }
 
         div.header {
@@ -26,6 +28,9 @@
             color: #BBB;
             text-align: center;
             font-size: 18pt;
+        }
+
+        div.content {
         }
 
         word-touch {

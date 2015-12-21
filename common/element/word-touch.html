@@ -4,10 +4,12 @@
 
 <dom-module id="word-touch">
     <template>
-        <paper-button raised class>
-            <div class="word">{{kana.word}}</div>
-            <div class="spell">{{kana.spell}}</div
-        </paper-button>
+        <div class$="{{_isEmptyKana(kana)}}">
+            <paper-button raised class>
+                <div class="word">{{kana.word}}</div>
+                <div class="spell">{{kana.spell}}</div
+            </paper-button>
+        </div>
     </template>
     <style is= "word-touch">
         paper-button {
@@ -23,6 +25,10 @@
 
         paper-button:hover div.spell {
             background: #999 !important;
+        }
+
+        div.empty-kana {
+            visibility: hidden;
         }
 
         div.word {
@@ -58,7 +64,14 @@
             }, 
             factoryImpl: function(kana) {
                 this.kana = kana;
-                this.notifyPath('kana', this.kana);
+            },
+            _isEmptyKana: function(kana) {
+                if (checkObjectIsEmptyKana(kana)) {
+
+                console.log(kana);
+                    return " empty-kana";
+                }
+                return "";
             }
         });
     </script>
