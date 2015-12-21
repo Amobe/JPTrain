@@ -14,6 +14,7 @@
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
-    "paper-button": "PolymerElements/paper-button#~1.0.11"
+    "paper-button": "PolymerElements/paper-button#~1.0.11",
+    "paper-input": "PolymerElements/paper-input#~1.1.3"
   }
 }

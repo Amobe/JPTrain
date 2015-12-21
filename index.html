@@ -8,11 +8,11 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- Polymer Lib -->
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
     <!-- Common Lib -->
-    <link rel="import" href="common/element/word-touch.html">
+    <link rel="import" href="common/element/word-chain.html">
     <link rel="import" href="common/element/word-row.html">
     <link rel="import" href="common/element/word-table.html">
+    <link rel="import" href="common/element/word-touch.html">
     <link rel="stylesheet" href="common/css/screen.css">
 </head>
 <body>
@@ -20,11 +20,13 @@
     </div>
     <div id="container-dakuon">
     </div>
+    <div id="footer" style="">
+        <word-chain id="word-chain"></word-chain>
+    </div>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="common/js/words.js" ></script>
     <script>
         $("#container-seion").append(new WordTable(hiraganaSeionTable));
-
         $("#container-dakuon").append(new WordTable(hiraganaDakuonTable));
     </script>
 </body>

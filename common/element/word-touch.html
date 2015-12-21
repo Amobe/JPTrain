@@ -1,11 +1,12 @@
 
+<link rel="import" href="word-chain.html">
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
 <dom-module id="word-touch">
     <template>
         <div class$="{{_isEmptyKana(kana)}}">
-            <paper-button raised class>
+            <paper-button raised class on-click="_inputKana">
                 <div class="word">{{kana.word}}</div>
                 <div class="spell">{{kana.spell}}</div
             </paper-button>
@@ -61,17 +62,21 @@
             },
             ready: function() {
                 logging(this.kana);
+                //this.$.val.innerHTML = this.kana.spell;
+                this.$.innerTEXT = this.kana.spell;
             }, 
             factoryImpl: function(kana) {
                 this.kana = kana;
             },
             _isEmptyKana: function(kana) {
-                if (checkObjectIsEmptyKana(kana)) {
-
-                console.log(kana);
+                if (checkObjectIsEmptyKana(kana))
                     return " empty-kana";
-                }
                 return "";
+            },
+            _inputKana: function(e) {
+                var wordChain = document.querySelector('#word-chain');
+                console.log(this.kana);
+                wordChain.AddWord(this.kana.word);
             }
         });
     </script>
