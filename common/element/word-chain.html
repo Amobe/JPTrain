@@ -5,13 +5,14 @@
 
 <dom-module id="word-chain">
     <template>
-        <paper-input id="input" label="Selected Kana" no-label-float></paper-input>
+        <paper-input id="word-input" label="Kana" no-label-float></paper-input>
+        <paper-input id="spell-input" label="Spell" no-label-float></paper-input>
 
         <table class="button-group">
             <tr>
-                <td><paper-button raised class="exchange">平 ⇋ 片</paper-button></td>
+                <td><paper-button raised class="exchange" disabled>平 ⇋ 片</paper-button></td>
                 <td class="button-gap"></td>
-                <td><paper-button raised class="clear">Clear</paper-button></td>
+                <td><paper-button raised class="clear" on-click="_clearInput">Clear</paper-button></td>
             </tr>
         </table>
     </template>
@@ -60,8 +61,13 @@
             },
             hostAttributes: {
             },
-            AddWord: function(word) {
-                $("#word-chain paper-input")[0].value += word;
+            AddWord: function(kana) {
+                $("#word-chain paper-input")[0].value += kana.word;
+                $("#word-chain paper-input")[1].value += kana.spell;
+            },
+            _clearInput: function(e) {
+                $("#word-chain paper-input")[0].value = "";
+                $("#word-chain paper-input")[1].value = "";
             }
         });
     </script>
