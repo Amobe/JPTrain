@@ -5,8 +5,8 @@
 
 <dom-module id="word-chain">
     <template>
-        <paper-input id="word-input" label="Kana" no-label-float></paper-input>
-        <paper-input id="spell-input" label="Spell" no-label-float></paper-input>
+        <paper-input id="word-input" label="Kana" on-click="_click" no-label-float></paper-input>
+        <paper-input id="spell-input" label="Spell" on-click="_click" no-label-float></paper-input>
 
         <table class="button-group">
             <tr>
@@ -68,6 +68,9 @@
             _clearInput: function(e) {
                 $("#word-chain paper-input")[0].value = "";
                 $("#word-chain paper-input")[1].value = "";
+            },
+            _click: function(event) {
+                event.target.select();
             }
         });
     </script>
