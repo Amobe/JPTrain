@@ -1,12 +1,23 @@
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 
 <dom-module id="word-chain">
     <template>
-        <paper-input id="word-input" label="Kana" on-click="_click" no-label-float></paper-input>
-        <paper-input id="spell-input" label="Spell" on-click="_click" no-label-float></paper-input>
+        <table class="input-group">
+            <tr>
+                <td><paper-input id="word-input" label="Kana" no-label-float></paper-input></td>
+                <td><paper-button raised class="copy" on-click="_copyKana"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
+            </tr>
+            <tr>
+                <td><paper-input id="spell-input" label="Spell" no-label-float></paper-input></td>
+                <td><paper-button raised class="copy" on-click="_copySpell"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
+            </tr>
+        </table>
 
         <table class="button-group">
             <tr>
@@ -30,6 +41,21 @@
             };
         }
 
+        .input-group {
+            width: 100%;
+        }
+
+        .input-group td {
+            width: 100%;
+        }
+
+        .input-group td paper-button {
+            margin: 0;
+            margin-left: 0.58em;
+            padding: 5px 0;
+            min-width: 60px;
+        }
+
         .button-group {
             width: 100%;
         }
@@ -38,6 +64,10 @@
             min-width: 10px;
             max-width: 10px;
             width:10px;
+        }
+
+        .copy {
+            color: #2C3E50;
         }
 
         .exchange {
@@ -69,8 +99,11 @@
                 $("#word-chain paper-input")[0].value = "";
                 $("#word-chain paper-input")[1].value = "";
             },
-            _click: function(event) {
-                event.target.select();
+            _copyKana: function() {
+                clipboard.copy($("#word-chain paper-input")[0].value);
+            },
+            _copySpell: function() {
+                clipboard.copy($("#word-chain paper-input")[1].value);
             }
         });
     </script>
