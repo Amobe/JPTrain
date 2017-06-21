@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node_modules/polymer-cli/bin/polymer.js serve --open",
+    "build": "node_modules/polymer-cli/bin/polymer.js build"
+  },
+  "devDependencies": {
+    "polymer-cli": "^1.2.0",
+    "bower": "^1.2.0"
+  }
+}

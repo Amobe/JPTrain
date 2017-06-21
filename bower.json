@@ -1,5 +1,5 @@
 {
-  "name": "JPTrain",
+  "name": "jptrain",
   "homepage": "https://github.com/Amobe/JPTrain",
   "authors": [
     "Amobe <amobe.momoko@gmail.com>"
@@ -13,13 +13,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.0",
-    "paper-button": "PolymerElements/paper-button#~1.0.11",
-    "paper-input": "PolymerElements/paper-input#~1.1.3",
-    "paper-tabs": "PolymerElements/paper-tabs#~1.2.4",
-    "iron-pages": "PolymerElements/iron-pages#~1.0.5",
-    "neon-animation": "PolymerElements/neon-animation#~1.0.8",
-    "iron-icons": "PolymerElements/iron-icons#^1.1.3",
-    "iron-icon": "PolymerElements/iron-icon#^1.0.7"
+    "polymer": "^2.0.1",
+    "paper-button": "^2.0.0",
+    "paper-input": "^2.0.1",
+    "paper-tabs": "^2.0.0",
+    "iron-pages": "^2.0.0",
+    "iron-icon": "^2.0.0",
+    "iron-icons": "^2.0.1",
+    "neon-animation": "^2.0.1",
+    "clipboard.js": "^0.3.3"
   }
 }
