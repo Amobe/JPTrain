@@ -14,30 +14,31 @@
                 </template>
             </div>
         </div>
+
+        <style is= "word-row">
+            div {
+                display: table;
+                background: #333;
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+
+            div.header {
+                width: 100%;
+                color: #BBB;
+                text-align: center;
+                font-size: 16pt;
+            }
+
+            div.content {
+            }
+
+            word-touch {
+                display: table-row;
+            }
+
+        </style>
     </template>
-    <style is= "word-row">
-        div {
-            display: table;
-            background: #333;
-            padding-top: 10px;
-            padding-bottom: 5px;
-        }
-
-        div.header {
-            width: 100%;
-            color: #BBB;
-            text-align: center;
-            font-size: 16pt;
-        }
-
-        div.content {
-        }
-
-        word-touch {
-            display: table-row;
-        }
-
-    </style>
     <script>
         WordRow = Polymer({
             is: "word-row",

@@ -35,32 +35,33 @@
                 </div>
             </neon-animatable>
         </neon-animated-pages>
+
+        <style is= "word-tab">
+            :root {
+                --paper-tab-ink: rgba(172,172,172,0.3);
+                --paper-tabs-selection-bar-color: #AAA;
+            }
+
+            paper-tabs {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 30%;
+                z-index: 1000;
+                background: #262C32;
+                color: #AAA;
+                font-size: 18pt;
+                -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
+                -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
+                box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
+            }
+
+            neon-animatable > div {
+                padding-top: 50px;
+                width: 100%;
+            }
+        </style>
     </template>
-    <style is= "word-tab">
-        :root {
-            --paper-tab-ink: rgba(172,172,172,0.3);
-            --paper-tabs-selection-bar-color: #AAA;
-        }
-
-        paper-tabs {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 30%;
-            z-index: 1000;
-            background: #262C32;
-            color: #AAA;
-            font-size: 18pt;
-            -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
-            -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
-            box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.72);
-        }
-
-        neon-animatable > div {
-            padding-top: 50px;
-            width: 100%;
-        }
-    </style>
     <script>
         TableTab = Polymer({
             is: "table-tab",

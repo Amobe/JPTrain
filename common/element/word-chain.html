@@ -26,64 +26,65 @@
                 <td><paper-button raised class="clear" on-click="_clearInput">Clear</paper-button></td>
             </tr>
         </table>
-    </template>
-    <style>
-        paper-input {
-            margin: 0;
-            --paper-input-container-input: {
+
+        <style>
+            paper-input {
+                margin: 0;
+                --paper-input-container-input: {
+                    color: #333;
+                    line-height: 29px;
+                    font-size: 18pt;
+                };
+                --paper-input-container-label: {
+                    line-height: 29px;
+                    font-size: 18pt;
+                };
+            }
+
+            .input-group {
+                width: 100%;
+            }
+
+            .input-group td {
+                width: 100%;
+            }
+
+            .input-group td paper-button {
+                margin: 0;
+                margin-left: 0.58em;
+                padding: 5px 0;
+                min-width: 60px;
+            }
+
+            .button-group {
+                width: 100%;
+            }
+
+            .button-gap {
+                min-width: 10px;
+                max-width: 10px;
+                width:10px;
+            }
+
+            .copy {
+                color: #2C3E50;
+            }
+
+            .exchange {
+                margin: 0;
+                width: 100%;
+                background-color: #CCC;
                 color: #333;
-                line-height: 29px;
-                font-size: 18pt;
-            };
-            --paper-input-container-label: {
-                line-height: 29px;
-                font-size: 18pt;
-            };
-        }
+            }
 
-        .input-group {
-            width: 100%;
-        }
-
-        .input-group td {
-            width: 100%;
-        }
-
-        .input-group td paper-button {
-            margin: 0;
-            margin-left: 0.58em;
-            padding: 5px 0;
-            min-width: 60px;
-        }
-
-        .button-group {
-            width: 100%;
-        }
-
-        .button-gap {
-            min-width: 10px;
-            max-width: 10px;
-            width:10px;
-        }
-
-        .copy {
-            color: #2C3E50;
-        }
-
-        .exchange {
-            margin: 0;
-            width: 100%;
-            background-color: #CCC;
-            color: #333;
-        }
-
-        .clear {
-            margin: 0;
-            width: 100%;
-            background-color: var(--paper-indigo-500);
-            color: #EEE;
-        }
-    </style>
+            .clear {
+                margin: 0;
+                width: 100%;
+                background-color: var(--paper-indigo-500);
+                color: #EEE;
+            }
+        </style>
+    </template>
     <script>
         WordChain = Polymer({
             is: "word-chain",
