@@ -40,32 +40,38 @@
         </style>
     </template>
     <script>
-        WordRow = Polymer({
-            is: "word-row",
-            properties: {
-                kanaRow: Object,
-                keySpell: String,
-                kanaList: {
-                    type: Array,
-                    notify: true
+        class WordRow extends Polymer.Element {
+            static get is() { return 'word-row'; }
+            static get properties() {
+                return {
+                    kanaRow: Object,
+                    keySpell: String,
+                    kanaList: {
+                        type: Array,
+                        notify: true
+                    }
                 }
-            },
-            hostAttributes: {
-            },
-            ready: function() {
+            }
+            constructor(kanaRow) {
+                super();
+                if (kanaRow) {
+                    this.kanaRow = kanaRow;
+                    this.keySpell = kanaRow.keySpell;
+                    this.kanaList = kanaRow.kanaList;
+                }
+            }
+            ready() {
+                super.ready();
                 logging(this.kanaRow);
                 this.keySpell = this.kanaRow.keySpell;
                 this.kanaList = this.kanaRow.kanaList;
-            },
-            factoryImpl: function(kanaRow) {
-                this.kanaRow = kanaRow;
-                this.keySpell = kanaRow.keySpell;
-                this.kanaList = kanaRow.kanaList;
-            },
-            addKana: function(kana) {
+            }
+            addKana() {
                 this.push('kanaList', kana);
             }
-        });
+        }
+
+        customElements.define(WordRow.is, WordRow);
     </script>
 </dom-module>
 
