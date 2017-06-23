@@ -10,11 +10,11 @@
     <template>
         <table class="input-group">
             <tr>
-                <td><paper-input id="word-input" label="Kana" no-label-float></paper-input></td>
+                <td><paper-input id="word-input" label="Kana" value="" no-label-float></paper-input></td>
                 <td><paper-button raised class="copy" on-click="_copyKana"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
             </tr>
             <tr>
-                <td><paper-input id="spell-input" label="Spell" no-label-float></paper-input></td>
+                <td><paper-input id="spell-input" label="Spell" value="" no-label-float></paper-input></td>
                 <td><paper-button raised class="copy" on-click="_copySpell"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
             </tr>
         </table>
@@ -93,18 +93,20 @@
             hostAttributes: {
             },
             AddWord: function(kana) {
-                $("#word-chain paper-input")[0].value += kana.word;
-                $("#word-chain paper-input")[1].value += kana.spell;
+                this.root.querySelector("#word-input").value += kana.word;
+                this.root.querySelector("#spell-input").value += kana.spell;
             },
             _clearInput: function(e) {
-                $("#word-chain paper-input")[0].value = "";
-                $("#word-chain paper-input")[1].value = "";
+                this.root.querySelector("#word-input").value = '';
+                this.root.querySelector("#spell-input").value = '';
             },
             _copyKana: function() {
-                clipboard.copy($("#word-chain paper-input")[0].value);
+                let wordInput = this.root.querySelector("#word-input");
+                clipboard.copy(wordInput.value);
             },
             _copySpell: function() {
-                clipboard.copy($("#word-chain paper-input")[1].value);
+                let spellInput = this.root.querySelector("#spell-input");
+                clipboard.copy(spellInput.value);
             }
         });
     </script>
