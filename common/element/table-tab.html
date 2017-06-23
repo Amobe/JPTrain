@@ -82,13 +82,20 @@
             hostAttributes: {
             },
             attached: function() {
-                $("#container-hiragana-seion").append(new WordTable(hiraganaSeionTable));
-                $("#container-hiragana-dakuon").append(new WordTable(hiraganaDakuonTable));
-                $("#container-hiragana-yoon").append(new WordTable(hiraganaYoonTable));
+                let container;
+                container = this.root.querySelector('#container-hiragana-seion');
+                container.appendChild(new WordTable(hiraganaSeionTable));
+                container = this.root.querySelector('#container-hiragana-dakuon');
+                container.appendChild(new WordTable(hiraganaDakuonTable));
+                container = this.root.querySelector('#container-hiragana-yoon');
+                container.appendChild(new WordTable(hiraganaYoonTable));
 
-                $("#container-katakana-seion").append(new WordTable(katakanaSeionTable));
-                $("#container-katakana-dakuon").append(new WordTable(katakanaDakuonTable));
-                $("#container-katakana-yoon").append(new WordTable(katakanaYoonTable));
+                container = this.root.querySelector('#container-katakana-seion');
+                container.appendChild(new WordTable(katakanaSeionTable));
+                container = this.root.querySelector('#container-katakana-dakuon');
+                container.appendChild(new WordTable(katakanaDakuonTable));
+                container = this.root.querySelector('#container-katakana-yoon');
+                container.appendChild(new WordTable(katakanaYoonTable));
             },
             factoryImpl: function() {
             },
