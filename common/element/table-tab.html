@@ -63,25 +63,26 @@
         </style>
     </template>
     <script>
-        TableTab = Polymer({
-            is: "table-tab",
-            properties: {
-                selected: {
-                    type: Number,
-                    value: 0
-                },
-                entryAnimation: {
-                    type: Object,
-                    value: 'slide-from-right-animation'
-                },
-                exitAnimation: {
-                    type: Object,
-                    value: 'slide-left-animation'
-                }
-            },
-            hostAttributes: {
-            },
-            attached: function() {
+        class TableTab extends Polymer.Element {
+            static get is() { return 'table-tab'; }
+            static get properties() {
+                return {
+                    selected: {
+                        type: Number,
+                        value: 0
+                    },
+                    entryAnimation: {
+                        type: Object,
+                        value: 'slide-from-right-animation'
+                    },
+                    exitAnimation: {
+                        type: Object,
+                        value: 'slide-left-animation'
+                    }
+                };
+            }
+            ready() {
+                super.ready();
                 let container;
                 container = this.root.querySelector('#container-hiragana-seion');
                 container.appendChild(new WordTable(hiraganaSeionTable));
@@ -96,17 +97,17 @@
                 container.appendChild(new WordTable(katakanaDakuonTable));
                 container = this.root.querySelector('#container-katakana-yoon');
                 container.appendChild(new WordTable(katakanaYoonTable));
-            },
-            factoryImpl: function() {
-            },
-            _onLeftClick: function() {
+            }
+            _onLeftClick() {
                 this.entryAnimation = 'slide-from-right-animation';
                 this.exitAnimation = 'slide-left-animation';
-            },
-            _onRightClick: function() {
+            }
+            _onRightClick() {
                 this.entryAnimation = 'slide-from-left-animation';
                 this.exitAnimation = 'slide-right-animation';
             }
-        });
+        }
+
+        customElements.define(TableTab.is, TableTab);
     </script>
 </dom-module>
