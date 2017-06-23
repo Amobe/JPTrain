@@ -86,28 +86,32 @@
         </style>
     </template>
     <script>
-        WordChain = Polymer({
-            is: "word-chain",
-            properties: {
-            },
-            hostAttributes: {
-            },
-            AddWord: function(kana) {
-                this.root.querySelector("#word-input").value += kana.word;
-                this.root.querySelector("#spell-input").value += kana.spell;
-            },
-            _clearInput: function(e) {
-                this.root.querySelector("#word-input").value = '';
-                this.root.querySelector("#spell-input").value = '';
-            },
-            _copyKana: function() {
-                let wordInput = this.root.querySelector("#word-input");
-                clipboard.copy(wordInput.value);
-            },
-            _copySpell: function() {
-                let spellInput = this.root.querySelector("#spell-input");
-                clipboard.copy(spellInput.value);
+        class WordChain extends Polymer.Element {
+            static get is() { return 'word-chain'; }
+            ready() {
+                super.ready();
+                this._wordInput = this.root.querySelector("#word-input");
+                this._wordInput.value = '';
+                this._spellInput = this.root.querySelector("#spell-input");
+                this._spellInput.value = '';
             }
-        });
+            AddWord(kana) {
+                if (!kana) return;
+                this._wordInput.value += kana.word;
+                this._spellInput.value += kana.spell;
+            }
+            _clearInput(e) {
+                this._wordInput.value = '';
+                this._spellInput.value = '';
+            }
+            _copyKana() {
+                clipboard.copy(this._wordInput.value);
+            }
+            _copySpell() {
+                clipboard.copy(this._spellInput.value);
+            }
+        }
+
+        customElements.define(WordChain.is, WordChain);
     </script>
 </dom-module>
