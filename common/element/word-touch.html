@@ -1,4 +1,3 @@
-
 <link rel="import" href="word-chain.html">
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
@@ -6,13 +5,13 @@
 <dom-module id="word-touch">
     <template>
         <div class$="{{_isEmptyKana(kana)}}">
-            <paper-button raised class on-click="_inputKana">
+            <paper-button raised="" class="" on-click="_inputKana">
                 <div class="word">{{kana.word}}</div>
                 <div class="spell">{{kana.spell}}</div>
             </paper-button>
         </div>
 
-        <style is= "word-touch">
+        <style is="word-touch">
             paper-button {
                 font-family: "Sawarabi Mincho";
                 position: relative;

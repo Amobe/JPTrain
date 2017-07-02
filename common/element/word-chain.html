@@ -1,4 +1,3 @@
-
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
@@ -9,23 +8,23 @@
 <dom-module id="word-chain">
     <template>
         <table class="input-group">
-            <tr>
-                <td><paper-input id="word-input" label="Kana" value="" no-label-float></paper-input></td>
-                <td><paper-button raised class="copy" on-click="_copyKana"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
+            <tbody><tr>
+                <td><paper-input id="word-input" label="Kana" value="" no-label-float=""></paper-input></td>
+                <td><paper-button raised="" class="copy" on-click="_copyKana"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
             </tr>
             <tr>
-                <td><paper-input id="spell-input" label="Spell" value="" no-label-float></paper-input></td>
-                <td><paper-button raised class="copy" on-click="_copySpell"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
+                <td><paper-input id="spell-input" label="Spell" value="" no-label-float=""></paper-input></td>
+                <td><paper-button raised="" class="copy" on-click="_copySpell"><iron-icon icon="icons:content-copy"></iron-icon></paper-button></td>
             </tr>
-        </table>
+        </tbody></table>
 
         <table class="button-group">
-            <tr>
-                <td><paper-button raised class="exchange" disabled>平 ⇋ 片</paper-button></td>
+            <tbody><tr>
+                <td><paper-button raised="" class="exchange" disabled="">平 ⇋ 片</paper-button></td>
                 <td class="button-gap"></td>
-                <td><paper-button raised class="clear" on-click="_clearInput">Clear</paper-button></td>
+                <td><paper-button raised="" class="clear" on-click="_clearInput">Clear</paper-button></td>
             </tr>
-        </table>
+        </tbody></table>
 
         <style>
             paper-input {
