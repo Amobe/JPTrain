@@ -14,7 +14,7 @@ Kana.prototype.GetTypeName = function() {
 
 function checkObjectIsKana(kana) {
     if (typeof(kana.GetTypeName) === 'function') {
-        if (kana.GetTypeName() == 'Kana')
+        if (kana.GetTypeName() === 'Kana')
             return true;
     }
     logging('Object is not a Kana: ' + kana);
