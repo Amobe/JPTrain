@@ -1,7 +1,7 @@
 var DEBUG = false;
 
 function logging(msg) {
-    if(DEBUG) console.log(msg);
+    if (DEBUG) console.log(msg);
 };
 
 function inherits(ctor, superCtor) {
@@ -19,12 +19,12 @@ function inherits(ctor, superCtor) {
 function loadJSON(file, callback) {
     var xobj = new XMLHttpRequest();
     xobj.callback = callback;
-    if(xobj.overrideMimeType) {
+    if (xobj.overrideMimeType) {
         xobj.overrideMimeType('application/json');
     }
     xobj.open('GET', file, true);
     xobj.onreadystatechange = function() {
-        if(this.readyState === 4) {
+        if (this.readyState === 4) {
             this.callback(this);
         }
     }

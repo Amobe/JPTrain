@@ -8,8 +8,8 @@ loadJSON('common/data/hiragana.json', function(obj) {
     logging(HIRAGANA_DATA);
 
     var tables = HIRAGANA_DATA.tables;
-    for(var table in tables) {
-        if(tables.hasOwnProperty(table))
+    for (var table in tables) {
+        if (tables.hasOwnProperty(table))
             hiraganaTables[table] = createTable(tables[table]);
     }
 });
@@ -19,8 +19,8 @@ loadJSON('common/data/katakana.json', function(obj) {
     logging(KATAKANA_DATA);
 
     var tables = KATAKANA_DATA.tables;
-    for(var table in tables) {
-        if(tables.hasOwnProperty(table))
+    for (var table in tables) {
+        if (tables.hasOwnProperty(table))
             katakanaTables[table] = createTable(tables[table]);
     }
 });
