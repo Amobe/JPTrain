@@ -33,16 +33,6 @@
                 ]
             },
             {
-                "row": "n",
-                "words": [
-                    { "word": "な", "spell": "na" },
-                    { "word": "に", "spell": "ni" },
-                    { "word": "ぬ", "spell": "nu" },
-                    { "word": "ね", "spell": "ne" },
-                    { "word": "の", "spell": "no" }
-                ]
-            },
-            {
                 "row": "t",
                 "words": [
                     { "word": "た", "spell": "ta" },
@@ -50,6 +40,16 @@
                     { "word": "つ", "spell": "tsu" },
                     { "word": "て", "spell": "te" },
                     { "word": "と", "spell": "to" }
+                ]
+            },
+            {
+                "row": "n",
+                "words": [
+                    { "word": "な", "spell": "na" },
+                    { "word": "に", "spell": "ni" },
+                    { "word": "ぬ", "spell": "nu" },
+                    { "word": "ね", "spell": "ne" },
+                    { "word": "の", "spell": "no" }
                 ]
             },
             {
