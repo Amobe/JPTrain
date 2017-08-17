@@ -1,7 +1,7 @@
 function EmptyKana() {
     EmptyKana._super.call(this);
-    this.word = ".";
-    this.spell = ".";
+    this.word = '.';
+    this.spell = '.';
 };
 
 inherits(EmptyKana, Kana);
@@ -12,9 +12,9 @@ EmptyKana.prototype.GetTypeName = function() {
 
 function checkObjectIsEmptyKana(kana) {
     if (typeof(kana.GetTypeName) === 'function') {
-        if (kana.GetTypeName() == "EmptyKana")
+        if (kana.GetTypeName() == 'EmptyKana')
             return true;
     }
-    logging("Object is not a EmptyKana: " + kana);
+    logging('Object is not a EmptyKana: ' + kana);
     return false;
 };

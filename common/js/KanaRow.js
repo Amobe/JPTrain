@@ -20,9 +20,9 @@ KanaRow.prototype.GetTypeName = function() {
 
 function checkObjectIsKanaRow(kanaRow) {
     if (typeof(kanaRow.GetTypeName) === 'function') {
-        if (kanaRow.GetTypeName() == "KanaRow")
+        if (kanaRow.GetTypeName() == 'KanaRow')
             return true;
     }
-    logging("Object is not a KanaRow: " + kanaRow);
+    logging('Object is not a KanaRow: ' + kanaRow);
     return false;
 };
