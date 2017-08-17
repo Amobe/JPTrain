@@ -85,18 +85,22 @@
                 super.ready();
                 let container;
                 container = this.root.querySelector('#container-hiragana-seion');
-                container.appendChild(new WordTable(hiraganaSeionTable));
+                container.appendChild(new WordTable(hiraganaTables.seion));
                 container = this.root.querySelector('#container-hiragana-dakuon');
-                container.appendChild(new WordTable(hiraganaDakuonTable));
+                container.appendChild(new WordTable(hiraganaTables.dakuon));
+                container.appendChild(new WordTable(hiraganaTables.han_dakuon));
+                container.appendChild(new WordTable(hiraganaTables.sokuon));
                 container = this.root.querySelector('#container-hiragana-yoon');
-                container.appendChild(new WordTable(hiraganaYoonTable));
+                container.appendChild(new WordTable(hiraganaTables.yoon));
 
                 container = this.root.querySelector('#container-katakana-seion');
-                container.appendChild(new WordTable(katakanaSeionTable));
+                container.appendChild(new WordTable(katakanaTables.seion));
                 container = this.root.querySelector('#container-katakana-dakuon');
-                container.appendChild(new WordTable(katakanaDakuonTable));
+                container.appendChild(new WordTable(katakanaTables.dakuon));
+                container.appendChild(new WordTable(katakanaTables.han_dakuon));
+                container.appendChild(new WordTable(katakanaTables.sokuon));
                 container = this.root.querySelector('#container-katakana-yoon');
-                container.appendChild(new WordTable(katakanaYoonTable));
+                container.appendChild(new WordTable(katakanaTables.yoon));
             }
             _onLeftClick() {
                 this.entryAnimation = 'slide-from-right-animation';
