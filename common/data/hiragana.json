@@ -1,0 +1,271 @@
+{
+    "name": "hiragana",
+    "tables": {
+        "seion": [
+            {
+                "row": "a",
+                "words": [
+                    { "word": "あ", "spell": "a" },
+                    { "word": "い", "spell": "i" },
+                    { "word": "う", "spell": "u" },
+                    { "word": "え", "spell": "e" },
+                    { "word": "お", "spell": "o" }
+                ]
+            },
+            {
+                "row": "k",
+                "words": [
+                    { "word": "か", "spell": "ka" },
+                    { "word": "き", "spell": "ki" },
+                    { "word": "く", "spell": "ku" },
+                    { "word": "け", "spell": "ke" },
+                    { "word": "こ", "spell": "ko" }
+                ]
+            },
+            {
+                "row": "s",
+                "words": [
+                    { "word": "さ", "spell": "sa" },
+                    { "word": "し", "spell": "shi" },
+                    { "word": "す", "spell": "su" },
+                    { "word": "せ", "spell": "se" },
+                    { "word": "そ", "spell": "so" }
+                ]
+            },
+            {
+                "row": "t",
+                "words": [
+                    { "word": "た", "spell": "ta" },
+                    { "word": "ち", "spell": "chi" },
+                    { "word": "つ", "spell": "tsu" },
+                    { "word": "て", "spell": "te" },
+                    { "word": "と", "spell": "to" }
+                ]
+            },
+            {
+                "row": "n",
+                "words": [
+                    { "word": "な", "spell": "na" },
+                    { "word": "に", "spell": "ni" },
+                    { "word": "ぬ", "spell": "nu" },
+                    { "word": "ね", "spell": "ne" },
+                    { "word": "の", "spell": "no" }
+                ]
+            },
+            {
+                "row": "h",
+                "words": [
+                    { "word": "は", "spell": "ha" },
+                    { "word": "ひ", "spell": "hi" },
+                    { "word": "ふ", "spell": "fu" },
+                    { "word": "へ", "spell": "he" },
+                    { "word": "ほ", "spell": "ho" }
+                ]
+            },
+            {
+                "row": "m",
+                "words": [
+                    { "word": "ま", "spell": "ma" },
+                    { "word": "み", "spell": "mi" },
+                    { "word": "む", "spell": "mu" },
+                    { "word": "め", "spell": "me" },
+                    { "word": "も", "spell": "mo" }
+                ]
+            },
+            {
+                "row": "y",
+                "words": [
+                    { "word": "や", "spell": "ya" },
+                    { "word": "ゆ", "spell": "yu" },
+                    { "word": "よ", "spell": "yo" }
+                ]
+            },
+            {
+                "row": "r",
+                "words": [
+                    { "word": "ら", "spell": "ra" },
+                    { "word": "り", "spell": "ri" },
+                    { "word": "る", "spell": "ru" },
+                    { "word": "れ", "spell": "re" },
+                    { "word": "ろ", "spell": "ro" }
+                ]
+            },
+            {
+                "row": "w",
+                "words": [
+                    { "word": "わ", "spell": "wa" },
+                    { "word": "ゐ", "spell": "wi" },
+                    { "word": "ゑ", "spell": "we" },
+                    { "word": "を", "spell": "wo" }
+                ]
+            },
+            {
+                "row": "-",
+                "words": [
+                    { "word": "ん", "spell": "n" },
+                    { "word": "を", "spell": "o" }
+                ]
+            }
+        ],
+        "dakuon": [
+            {
+                "row": "g",
+                "words": [
+                    { "word": "が", "spell": "ga" },
+                    { "word": "ぎ", "spell": "gi" },
+                    { "word": "ぐ", "spell": "gu" },
+                    { "word": "げ", "spell": "ge" },
+                    { "word": "ご", "spell": "go" }
+                ]
+            },
+            {
+                "row": "z",
+                "words": [
+                    { "word": "ざ", "spell": "za" },
+                    { "word": "じ", "spell": "zi" },
+                    { "word": "ず", "spell": "zu" },
+                    { "word": "ぜ", "spell": "ze" },
+                    { "word": "ぞ", "spell": "zo" }
+                ]
+            },
+            {
+                "row": "d",
+                "words": [
+                    { "word": "だ", "spell": "da" },
+                    { "word": "ぢ", "spell": "ji" },
+                    { "word": "づ", "spell": "zu" },
+                    { "word": "で", "spell": "de" },
+                    { "word": "ど", "spell": "do" }
+                ]
+            },
+            {
+                "row": "b",
+                "words": [
+                    { "word": "ば", "spell": "ba" },
+                    { "word": "び", "spell": "bi" },
+                    { "word": "ぶ", "spell": "bu" },
+                    { "word": "べ", "spell": "be" },
+                    { "word": "ぼ", "spell": "bo" }
+                ]
+            }
+        ],
+        "han_dakuon": [
+            {
+                "row": "p",
+                "words": [
+                    { "word": "ぱ", "spell": "pa" },
+                    { "word": "ぴ", "spell": "pi" },
+                    { "word": "ぷ", "spell": "pu" },
+                    { "word": "ぺ", "spell": "pe" },
+                    { "word": "ぽ", "spell": "po" }
+                ]
+            }
+        ],
+        "sokuon": [
+            {
+                "row": "-",
+                "words": [
+                    { "word": "っ", "spell": "-" }
+                ]
+            }
+        ],
+        "yoon": [
+            {
+                "row": "k",
+                "words": [
+                    { "word": "きゃ", "spell": "kya" },
+                    { "word": "きゅ", "spell": "kyu" },
+                    { "word": "きょ", "spell": "kyo" }
+                ]
+            },
+            {
+                "row": "g",
+                "words": [
+                    { "word": "ぎゃ", "spell": "gya" },
+                    { "word": "ぎゅ", "spell": "gyu" },
+                    { "word": "ぎょ", "spell": "gyo" }
+                ]
+            },
+            {
+                "row": "s",
+                "words": [
+                    { "word": "しゃ", "spell": "sha" },
+                    { "word": "しゅ", "spell": "shu" },
+                    { "word": "しょ", "spell": "sho" }
+                ]
+            },
+            {
+                "row": "z",
+                "words": [
+                    { "word": "じゃ", "spell": "zya" },
+                    { "word": "じゅ", "spell": "zyu" },
+                    { "word": "じょ", "spell": "zyo" }
+                ]
+            },
+            {
+                "row": "c",
+                "words": [
+                    { "word": "ちゃ", "spell": "cha" },
+                    { "word": "ちゅ", "spell": "chu" },
+                    { "word": "ちょ", "spell": "cho" }
+                ]
+            },
+            {
+                "row": "j",
+                "words": [
+                    { "word": "ぢゃ", "spell": "ja" },
+                    { "word": "ぢゅ", "spell": "ju" },
+                    { "word": "ぢょ", "spell": "jo" }
+                ]
+            },
+            {
+                "row": "n",
+                "words": [
+                    { "word": "にゃ", "spell": "nya" },
+                    { "word": "にゅ", "spell": "nyu" },
+                    { "word": "にょ", "spell": "nyo" }
+                ]
+            },
+            {
+                "row": "h",
+                "words": [
+                    { "word": "ひゃ", "spell": "hya" },
+                    { "word": "ひゅ", "spell": "hyu" },
+                    { "word": "ひょ", "spell": "hyo" }
+                ]
+            },
+            {
+                "row": "b",
+                "words": [
+                    { "word": "びゃ", "spell": "bya" },
+                    { "word": "びゅ", "spell": "byu" },
+                    { "word": "びょ", "spell": "byo" }
+                ]
+            },
+            {
+                "row": "p",
+                "words": [
+                    { "word": "ぴゃ", "spell": "pya" },
+                    { "word": "ぴゅ", "spell": "pyu" },
+                    { "word": "ぴょ", "spell": "pyo" }
+                ]
+            },
+            {
+                "row": "m",
+                "words": [
+                    { "word": "みゃ", "spell": "mya" },
+                    { "word": "みゅ", "spell": "myu" },
+                    { "word": "みょ", "spell": "myo" }
+                ]
+            },
+            {
+                "row": "r",
+                "words": [
+                    { "word": "りゃ", "spell": "rya" },
+                    { "word": "りゅ", "spell": "ryu" },
+                    { "word": "りょ", "spell": "ryo" }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "jptrain",
+  "homepage": "https://github.com/Amobe/JPTrain",
+  "authors": [
+    "Amobe <amobe.momoko@gmail.com>"
+  ],
+  "description": "Japanese learn Website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "JPTrain"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "^2.0.1",
+    "paper-button": "^2.0.0",
+    "paper-input": "^2.0.1",
+    "paper-tabs": "^2.0.0",
+    "iron-pages": "^2.0.0",
+    "iron-icon": "^2.0.0",
+    "iron-icons": "^2.0.1",
+    "neon-animation": "^2.0.1",
+    "clipboard.js": "^0.3.3",
+    "web-animations-js": "^2.2.5"
+  }
+}
