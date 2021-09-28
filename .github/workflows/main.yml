@@ -34,6 +34,8 @@ jobs:
       - name: npm install
         run: |
           npm install
+          npm install bower
+          npm install polymer-cli
       - name: bower install
         run: |
           bower install
