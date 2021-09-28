@@ -1,0 +1,10 @@
+{
+    "entrypoint": "index.html",
+    "shell": "index.html",
+    "sources": [
+      "common/**/*",
+      "bower.json",
+      "favicon.ico",
+      "robots.txt"
+    ]
+  }
