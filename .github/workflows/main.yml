@@ -44,7 +44,7 @@ jobs:
           compass compile
       - name: Build project
         run: |
-          polymer build --bundle
+          polymer build
       - name: Copy static files
         run: |
           cp ./favicon.ico ./build/default
